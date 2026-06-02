@@ -82,12 +82,13 @@ function App() {
       <section>
         <div><b>Chat together on other systems! (This only works in chrome)</b></div>
         <div>Made with <a href="https://developer.chrome.com/docs/ai/prompt-api">the new prompt API</a></div>
+        <div><a href="https://github.com/jwdb/demo-prompt-api-together">Source</a></div>
         
         {!loaded && (<button onClick={load}>Load {downloadProgress > 0 ? (<>{downloadProgress}%</>) : (<></>)}</button>)}
         {loaded && (
           <>
           <div>Current peers {peers}</div>
-            <div style={{ height: '90vh', display: "block", overflowY: "scroll"}}>
+            <div style={{ height: '80vh', display: "block", overflowY: "scroll"}}>
               <div>
               {chatHistory.map((message) => (
                 <div style={{ border: 'solid 1px gray' }}>{message}</div>
