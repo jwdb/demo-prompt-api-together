@@ -39,6 +39,7 @@ function App() {
     const r = joinRoom(config, "prompt-together-test");
     r.onPeerJoin = () => setPeers(Object.keys(r.getPeers()).length);
     r.onPeerLeave = () => setPeers(Object.keys(r.getPeers()).length);
+    setPeers(Object.keys(r.getPeers()).length);
     setRoom(r);
 
     const message = r.makeAction<string>("message", {
